@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>darg and drop todoList</title>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="relative flex h-[100vh] justify-center items-center">
+    <div class="w-[70%]">
+      <div class="flex w-full">
+        <div class="w-full">
+          <div
+            class="bg-blue-500 text-white text-xl text-center p-2 rounded-t-xl"
+          >
+            To do list
+          </div>
+
+          <div
+            id="toDoColumn"
+            class="column w-full h-[500px] bg-gray-100 flex flex-col items-center"
+          >
+            <button
+              id="addTodoBtn"
+              class="bg-green-400 w-[85%] p-2 text-lg font-medium rounded-xl mt-3 hover:bg-green-300"
+            >
+              Add Todo +
+            </button>
+          </div>
+        </div>
+        <div class="w-full">
+          <div
+            class="bg-blue-500 text-white text-xl text-center p-2 rounded-t-xl"
+          >
+            Want to start
+          </div>
+          <div
+            class="column w-full h-[500px] bg-gray-200 flex flex-col items-center"
+          ></div>
+        </div>
+        <div class="w-full">
+          <div
+            class="bg-blue-500 text-white text-xl text-center p-2 rounded-t-xl"
+          >
+            In progress
+          </div>
+
+          <div
+            class="column w-full h-[500px] bg-gray-100 flex flex-col items-center"
+          ></div>
+        </div>
+
+        <div class="w-full">
+          <div
+            class="bg-blue-500 text-white text-xl text-center p-2 rounded-t-xl"
+          >
+            Completed
+          </div>
+          <div
+            class="column w-full h-[500px] bg-gray-200 flex flex-col items-center"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+
+    <div
+      class="absolute modal__parent flex justify-center items-center w-full h-full inset-0 bg-black/70 invisible opacity-0 transition-all"
+    >
+      <div class="modal w-[480px] bg-white rounded-xl overflow-hidden">
+        <div class="flex justify-between bg-blue-200 p-2">
+          <span>add todo</span>
+          <button id="closeModal" class="hover:text-red-500">X</button>
+        </div>
+        <div class="w-full flex justify-center mt-7">
+          <input
+            id="input"
+            class="w-[85%] p-2 bg-slate-200"
+            type="text"
+            placeholder="enter todo..."
+          />
+        </div>
+        <div class="flex justify-center mb-7">
+          <button
+            id="addNewTodo"
+            class="rounded-xl w-[80%] p-2 bg-green-500 hover:bg-green-300 mt-7"
+          >
+            Add Todo
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
